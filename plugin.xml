@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-lotame"
+        version="0.1">
+    <name>Lotame</name>
+    <description>Cordova Lotame Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,lotame</keywords>
+    
+    <js-module src="www/lotame.js" name="Lotame">
+        <clobbers target="window.plugins.Lotame" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Lotame">
+                <param name="android-package" value="com.kuack.plugins.lotame.LotamePlugin" />
+            </feature>
+        </config-file>
+        
+        <source-file src="android/AtomParameter.java" target-dir="src/com/kuack/plugins/lotame" />
+        <source-file src="android/CrowdControl.java" target-dir="src/com/kuack/plugins/lotame" />
+        <source-file src="android/SendOverHTTP.java" target-dir="src/com/kuack/plugins/lotame" />
+        <source-file src="android/Utils.java" target-dir="src/com/kuack/plugins/lotame" />
+        <source-file src="android/LotamePlugin.java" target-dir="src/com/kuack/plugins/lotame" />
+        <source-file src="android/build-extras.gradle" target-dir="src/.." />
+    </platform>
+    
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Lotame">
+                <param name="ios-package" value="LotamePlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="ios/LotamePlugin.h" />
+        <source-file src="ios/LotamePlugin.m" />
+        <framework src="LotameDMP" type="podspec" spec="~> 4.1" />
+
+        <hook type="after_prepare" src="hooks/afterPrepare.js" />
+    </platform>
+
+</plugin>

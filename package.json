@@ -1,0 +1,16 @@
+{
+  "name": "cordova-plugin-lotame",
+  "version": "0.1",
+  "description": "Cordova Plugin Lotame",
+  "cordova": {
+    "id": "cordova-plugin-lotame",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "devDependencies": {
+    "plist": "3.0.1"
+  },
+  "license": "Apache-2.0"
+}
