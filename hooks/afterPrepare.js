@@ -18,6 +18,7 @@ module.exports = function (context) {
 
     obj.NSAppTransportSecurity.NSExceptionDomains['crwdcntrl.net'] = {
         NSIncludesSubdomains: true,
+        NSExceptionAllowsInsecureHTTPLoads: true,
         NSExceptionRequiresForwardSecrecy: false,
     };
 
