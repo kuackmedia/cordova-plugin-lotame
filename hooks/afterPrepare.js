@@ -59,9 +59,9 @@ module.exports = function (context) {
                 });
                 var builder = new xml2js.Builder();
                 fs.writeFileSync(manifestPath, builder.buildObject(manifest), { encoding: 'utf8' });
-                console.log('writing applicationMetaData')
+                // console.log('writing applicationMetaData')
             } else {
-                console.log('applicationMetaData found')
+                // console.log('applicationMetaData found')
             }
         })
     }
