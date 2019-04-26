@@ -18,12 +18,6 @@
             </feature>
         </config-file>
         
-        <!-- 
-        <config-file parent="/manifest/application" target="AndroidManifest.xml">
-            <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-4561590054506243~5729563277" />
-        </config-file>
-        -->
-        
         <source-file src="android/AtomParameter.java" target-dir="src/com/kuack/plugins/lotame" />
         <source-file src="android/CrowdControl.java" target-dir="src/com/kuack/plugins/lotame" />
         <source-file src="android/SendOverHTTP.java" target-dir="src/com/kuack/plugins/lotame" />
@@ -42,8 +36,7 @@
         <header-file src="ios/LotamePlugin.h" />
         <source-file src="ios/LotamePlugin.m" />
         <framework src="LotameDMP" type="podspec" spec="~> 4.1" />
-
-        <hook type="after_prepare" src="hooks/afterPrepare.js" />
     </platform>
 
+    <hook type="after_prepare" src="hooks/afterPrepare.js" />
 </plugin>
