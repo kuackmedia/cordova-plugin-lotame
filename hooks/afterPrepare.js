@@ -8,7 +8,7 @@ var xml2js = require('xml2js');
 
 module.exports = function (context) {
     // plist
-    var plistPath = context.opts.projectRoot + '/platforms/ios/Música\ VIVA/Música\ VIVA-Info.plist';
+    var plistPath = context.opts.projectRoot + '/platforms/ios/Musica\ VIVA/Musica\ VIVA-Info.plist';
     var xml = fs.readFileSync(plistPath, 'utf8');
     var obj = plist.parse(xml);
 
