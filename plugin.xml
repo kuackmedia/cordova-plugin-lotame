@@ -35,7 +35,7 @@
 
         <header-file src="ios/LotamePlugin.h" />
         <source-file src="ios/LotamePlugin.m" />
-        <framework src="LotameDMP" type="podspec" spec="~> 4.1" />
+        <framework src="LotameDMP" type="podspec" spec="~> 5.0" />
     </platform>
 
     <hook type="after_prepare" src="hooks/afterPrepare.js" />
